@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: kind-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /nginx
+        backend:
+          serviceName: nginx-service
+          servicePort: 8080
+      - path: /echo
+        backend:
+          serviceName: echo-service
+          servicePort: 8080
