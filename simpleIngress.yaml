@@ -9,8 +9,13 @@ spec:
       - path: /nginx
         backend:
           serviceName: nginx-service
-          servicePort: 8080
+          servicePort: 80
       - path: /echo
         backend:
           serviceName: echo-service
           servicePort: 8080
+      - path: /foobar
+        backend:
+          serviceName: foobar-service
+          servicePort: 5678
+          
